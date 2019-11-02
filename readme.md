@@ -17,6 +17,11 @@ Det kan gjøres ved å bruke travis encrypt for hver enkelt slik:
  travis encrypt DOCKER_USERNAME=<verdi> --add env.global
 ```
 
+```bash
+ travis encrypt $(heroku auth:token) --add deploy.api_key
+```
+
+
 ## Ekstra
 
 * Jeg har brukt @Timed annotasjonen på 50% av endepunktene. Denne gir en del metrics ut av boksen(tid, distributionSummary m.m) ved å f.eks. gi beanen konfigurasjon
